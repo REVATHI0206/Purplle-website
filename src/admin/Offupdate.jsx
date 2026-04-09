@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Update.css'
 const Offupdate = () => {
+          const API_URL = 'https://cosmetic-je04.onrender.com'
+
 
     const [productItems, setProductItems] = useState([])
     useEffect(() => {
-        fetch('http://localhost:6222/offReceive').then((res) => res.json()).then((data) => setProductItems(data), [])
+        fetch(`${API_URL}offReceive`).then((res) => res.json()).then((data) => setProductItems(data), [])
     })
     const deleteItems = (id) => {
-        fetch(`http://localhost:6222/offDelete/${id}`, {
+        fetch(`${API_URL}offDelete/${id}`, {
             method: "DELETE"
         }).then((res) => res.json()).then((data) => {
             alert("Data deleted successfully")

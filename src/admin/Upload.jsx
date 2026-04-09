@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Upload = () => {
 
     
-
+    const API_URL = 'https://cosmetic-je04.onrender.com'
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -22,7 +22,7 @@ const Upload = () => {
             const obj = { title, price, img, quantity }
             console.log(obj)
 
-            fetch(`http://localhost:6222/send`, {
+            fetch(`${API_URL}/send`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

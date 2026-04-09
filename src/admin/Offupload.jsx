@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
 const Upload = () => {
+          const API_URL = 'https://cosmetic-je04.onrender.com'
 
     
     const navigate = useNavigate()
@@ -22,7 +23,7 @@ const Upload = () => {
             const obj = { title, price, img, quantity }
             console.log(obj)
 
-            fetch(`http://localhost:6222/offSend`, {
+            fetch(`${API_URL}/offSend`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

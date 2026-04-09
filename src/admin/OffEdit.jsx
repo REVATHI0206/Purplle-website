@@ -70,6 +70,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import './Edit.css'
 
 const OffEdit = () => {
+        const API_URL = 'https://cosmetic-je04.onrender.com'
+
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -81,7 +83,7 @@ const OffEdit = () => {
 
   // old value fetch
   useEffect(() => {
-    fetch(`http://localhost:6222/offList/${id}`)
+    fetch(`${API_URL}offList/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProductData({
@@ -105,7 +107,7 @@ const OffEdit = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
 
-    fetch(`http://localhost:6222/offUpdate/${id}`, {
+    fetch(`${API_URL}offUpdate/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

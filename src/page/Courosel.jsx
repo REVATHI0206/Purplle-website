@@ -23,6 +23,8 @@ import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 
 const courosel = () => {
+            const API_URL = 'https://cosmetic-je04.onrender.com'
+
     const cartProducts = useSelector((state) => state.cart.cartItems)
     const dispatch = useDispatch()
 
@@ -36,7 +38,7 @@ const courosel = () => {
     }
     const [cosmetics, setCosmetics] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:6222/receive')
+        fetch(`${API_URL}/receive`)
         .then((res)=>res.json())
         .then((data)=>setCosmetics(data))
     },[])

@@ -7,6 +7,8 @@ import banner from '../images/banner.jpg'
 
 
 const Offer = () => {
+          const API_URL = 'https://cosmetic-je04.onrender.com'
+
    const cartProducts = useSelector((state) => state.cart.cartItems)
     const dispatch = useDispatch()
 
@@ -21,7 +23,7 @@ const Offer = () => {
   const [offerItems, setOfferItems] = useState([]); // important []
 
   useEffect(() => {
-    fetch("http://localhost:6222/offReceive")
+    fetch(`${API_URL}/offReceive`)
       .then((res) => res.json())
       .then((data) => {
         setOfferItems(data || []); // safe fallback
