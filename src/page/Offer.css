@@ -1,0 +1,83 @@
+/* Main container */
+.offer-container {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.offer-container h2 {
+  color: #d63384;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Grid layout */
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px;
+}
+
+/* Offer card */
+.offer-card {
+  background: #fff0f6;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.15);
+  transition: 0.3s ease;
+  border: 1px solid #ffcce6;
+  width: fit-content;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.25);
+}
+
+/* Image */
+.offer-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.offer-card h3 {
+  color: #c2185b;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.offer-card p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Discount text */
+.discount {
+  margin-top: 8px;
+  color: #ff1493;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ffe6f2;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .offer-container h2 {
+    font-size: 26px;
+  }
+
+  .offer-card img {
+    height: 180px;
+  }
+}

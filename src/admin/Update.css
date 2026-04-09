@@ -1,0 +1,123 @@
+/* Table container */
+#update-whole {
+  width: 90%;
+  margin: 50px auto;
+  background: #fff0f6; /* light pink background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.15);
+  overflow-x: auto;
+}
+
+/* Table styles */
+#update-whole table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Table headers */
+#update-whole th {
+  background: linear-gradient(135deg, #ff99cc, #ff66b2);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Table rows */
+#update-whole td {
+  padding: 12px;
+  text-align: center;
+  color: #a60060;
+  border-bottom: 1px solid #ffcce6;
+}
+
+/* Row hover effect */
+#update-whole tbody tr:hover {
+  background: #ffe6f0;
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+/* Images */
+#update-whole img {
+  border-radius: 8px;
+  border: 1px solid #ffb6c1;
+  padding: 2px;
+  transition: 0.3s;
+  height: 200px;
+  width: 250px;
+}
+
+#update-whole img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+}
+
+/* Delete button */
+#delete-btn {
+  background: #ff4d94;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#delete-btn:hover {
+  background: #ff1a75;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Edit button */
+#edit-btn {
+  background: #ff66b2;
+  color: white;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+#edit-btn:hover {
+  background: #ff3385;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #update-whole table, 
+  #update-whole thead, 
+  #update-whole tbody, 
+  #update-whole th, 
+  #update-whole td, 
+  #update-whole tr {
+    display: block;
+  }
+
+  #update-whole thead tr {
+    display: none;
+  }
+
+  #update-whole td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  #update-whole td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #ff66b2;
+  }
+}

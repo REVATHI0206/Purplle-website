@@ -1,0 +1,223 @@
+#cards7{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+   
+}
+li{
+    list-style: none;
+    border-radius: 20px ;
+    border: solid 6px palevioletred;
+}
+img{
+    width: 100%;
+}
+.btn{
+    padding: auto;
+    border-radius: 10px;
+    background-color: plum;
+}
+.str{
+    opacity: 50%;
+    font-size: 20px;
+  
+}
+.off{
+   align-items: center; 
+}
+#il{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.con2{
+    
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+ 
+}
+.vid{
+  width: 500px;
+}
+/* Product card buttons */
+.add-btn,
+.remove-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Add to cart */
+.add-btn {
+  background: linear-gradient(90deg, #ff1493, #d63384);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+}
+
+.add-btn:hover {
+  background: linear-gradient(90deg, #d63384, #ff1493);
+  transform: translateY(-2px);
+}
+
+/* Remove button */
+.remove-btn {
+  background: #fff0f6;
+  color: deeppink;
+  border: 1px solid deeppink;
+}
+
+.remove-btn:hover {
+  background: deeppink;
+  color: white;
+  transform: translateY(-2px);
+}
+.hnd {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 40px 0 25px;
+  color: #d63384;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* underline line */
+.hnd::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff1493, #d63384);
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+/* Cards container */
+#cards7 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,fr));
+  gap:50px;
+  padding: 30px;
+  margin: 0;
+  list-style: none;
+   box-shadow: 0 6px 18px rgba(248, 7, 127, 0.12);
+}
+
+/* Single product card */
+#il {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#il:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Product image */
+#il img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Product title */
+#il h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Offer text */
+.off {
+  color: #28a745;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Price */
+#il h3 {
+  color: deeppink;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+@media (max-width: 992px) {
+  #cards7 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carousel-item img {
+    height: 350px !important;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile */
+/* ========================= */
+@media (max-width: 768px) {
+  #cards7 {
+    grid-template-columns: 2fr;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #il img {
+    height: 220px;
+  }
+
+  .carousel-item img {
+    height: 220px !important;
+  }
+
+  .hnd {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .add-btn,
+  .remove-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* ========================= */
+/* 📱 Small Mobile */
+/* ========================= */
+@media (max-width: 480px) {
+  .carousel-item img {
+    height: 180px ;
+  }
+
+  #il h4 {
+    font-size: 18px;
+  }
+
+  #il h3 {
+    font-size: 20px;
+  }
+
+  .hnd {
+    font-size: 20px;
+  }
+}
