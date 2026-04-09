@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Update.css'
-const Offupdate = () => {
+const Offerupdate = () => {
           const API_URL = 'https://cosmetic-je04.onrender.com'
 
 
@@ -61,4 +61,4 @@ const Offupdate = () => {
     )
 }
 
-export default Offupdate
+export default Offerupdate

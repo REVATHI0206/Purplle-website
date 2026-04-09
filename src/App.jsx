@@ -14,8 +14,8 @@ import Update from './admin/Update'
 import Edit from './admin/Edit'
 import Offupload from './admin/Offupload'
 import OffEdit from './admin/OffEdit'
-import Offupdate from './admin/offupdate'
 import UserLogin from './user/User'
+import Offerupdate from './admin/Offerupdate'
 
 
 
@@ -42,7 +42,7 @@ function App() {
       <Route path='/edit/:id' element={<Edit/>} loader={({params})=>
       fetch(`http://localhost:6222/list/${params.id}`)}/>
       <Route path='/offupload' element={<Offupload/>}/>
-          <Route path='/offupdate' element={<Offupdate/>}/>
+          <Route path='/offupdate' element={<Offerupdate/>}/>
           
       <Route path='/offedit/:id' element={<OffEdit/>} loader={({params})=>
       fetch(`http://localhost:6222/offList/${params.id}`)}/>
